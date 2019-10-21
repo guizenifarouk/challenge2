@@ -44,15 +44,21 @@ Create two computers object from your factory function and save them in one arra
 
 Note: please write one or two lines here describing your solution.
 */
-
+var computer1 = ['asus', 'black', '1 kg'];
+var computer2 = ['hp', 'white', '2 kg'];
 function makeComputer(type, color, weight) {
-  // TODO: Your code here
+  return computer = [
+  {
+    type : type,
+    color : color,
+    weight : weight
+  }]
 }
 
 // Write a function displayComputer that can be used to display one computer.
 
 function displayComputer(computer) {
-  // TODO: Your code here
+ return computer1[type]+' '+computer1[color]+ ' '+computer1[weight];
 }
 
 //=============================================================================
@@ -73,7 +79,10 @@ uppercaseAll(strArr); ==> [ 'HELLO', 'WORLD', 'WHIRLED', 'PEAS' ]
 */
 
 function uppercaseAll(arrayOfStrings) {
-  // TODO: your code here
+  each(arrayOfStrings, function (element, i){
+    arrayOfStrings[i]= element.toUpperCase();
+  });
+  return arrayOfStrings;
 }
 
 //=============================================================================
@@ -112,7 +121,9 @@ var data = [
 ];
 
 function highestPopulation(arrayOfObjects) {
-  // TODO: your code here
+  return filter(arrayOfObjects, function(element, key){
+    return arrayOfObjects.population > 500000000;
+  })
 }
 
 //=============================================================================
@@ -132,8 +143,13 @@ Note: please write one or two lines here describing your solution.
 */
 
 function halveAll(numbers) {
-  // your code is here
+   each(numbers, function (number, i){
+    numbers[i]= number/2;
+  });
+  return numbers;
 }
+
+
 
 //=============================================================================
 /*                                  Q5                                       */
@@ -148,7 +164,10 @@ values({first : 5, second: 'something' , third : 129}) ==> [5, 'something', 129]
 Note: please write one or two lines here describing your solution.
 */
 function values(obj) {
-  // TODO: your code here
+return map(obj, function(element, key) {
+ var arr = [];
+ return  arr.push(obj.key.val);
+})
 }
 
 //Good Luck :))
