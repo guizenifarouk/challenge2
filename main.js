@@ -47,18 +47,17 @@ Note: please write one or two lines here describing your solution.
 var computer1 = ['asus', 'black', '1 kg'];
 var computer2 = ['hp', 'white', '2 kg'];
 function makeComputer(type, color, weight) {
-  return computer = [
-  {
+  return {
     type : type,
     color : color,
     weight : weight
-  }]
+  };
 }
 
 // Write a function displayComputer that can be used to display one computer.
 
 function displayComputer(computer) {
- return computer1[type]+' '+computer1[color]+ ' '+computer1[weight];
+ return computer2.type+' '+computer2.color+ ' '+computer2.weight;
 }
 
 //=============================================================================
@@ -163,11 +162,12 @@ values({first : 5, second: 'something' , third : 129}) ==> [5, 'something', 129]
 
 Note: please write one or two lines here describing your solution.
 */
-function values(obj) {
-return map(obj, function(element, key) {
- var arr = [];
- return  arr.push(obj.key.val);
-})
+function values( obj ) { 
+  var arr = [];
+  each(obj, function(element, key) {  
+     arr.push(element)
+  });
+  return arr; 
 }
 
 //Good Luck :))
